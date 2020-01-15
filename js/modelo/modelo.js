@@ -8,6 +8,7 @@ var Modelo = function() {
   //inicializacion de eventos
   this.preguntaAgregada = new Evento(this);
   this.preguntaBorrada = new Evento (this);
+  this.preguntasBorradas = new Evento (this);
 };
 
 Modelo.prototype = {
@@ -39,5 +40,11 @@ Modelo.prototype = {
       return i.id !==id;
     });
     this.preguntaBorrada.notificar();
-  }
+  },
+
+  borrarPreguntas: function(){
+    this.preguntas = this.preguntas=[];
+      this.preguntasBorradas.notificar();
+    }
 };
+

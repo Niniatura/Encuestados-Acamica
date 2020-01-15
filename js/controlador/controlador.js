@@ -11,5 +11,8 @@ Controlador.prototype = {
   },
   borrarPregunta: function (id) {
     this.modelo.borrarPregunta(id);
+  },
+  borrarPreguntas: function(){
+    this.modelo.borrarPreguntas();
   }
 }
