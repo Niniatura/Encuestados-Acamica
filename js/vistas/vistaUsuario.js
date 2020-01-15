@@ -51,6 +51,13 @@ VistaUsuario.prototype = {
     preguntas.forEach(function(clave){
       //completar
       //agregar a listaPreguntas un elemento div con valor "clave.textoPregunta", texto "clave.textoPregunta", id "clave.id"
+      listaPreguntas.append($('<div>',{
+        value:clave.textoPregunta,
+        text: clave.textoPregunta,
+        id: clave.id,
+      }));
+
+      
       var respuestas = clave.cantidadPorRespuesta;
       contexto.mostrarRespuestas(listaPreguntas,respuestas, clave);
     })
