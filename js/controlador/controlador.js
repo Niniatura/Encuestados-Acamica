@@ -1,18 +1,25 @@
 /*
  * Controlador
  */
-var Controlador = function(modelo) {
+var Controlador = function (modelo) {
   this.modelo = modelo;
 };
 
 Controlador.prototype = {
-  agregarPregunta: function(pregunta, respuestas) {
-      this.modelo.agregarPregunta(pregunta, respuestas);
+  agregarPregunta: function (pregunta, respuestas) {
+    this.modelo.agregarPregunta(pregunta, respuestas);
   },
-  borrarPregunta: function (id) {
-    this.modelo.borrarPregunta(id);
+  eliminarPregunta: function (id) {
+    this.modelo.eliminarPregunta(id);
   },
-  borrarPreguntas: function(){
-    this.modelo.borrarPreguntas();
+  borrarTodo: function () {
+    this.modelo.borrarTodo();
+  },
+  editarPregunta: function (nombre, respuestas, id) {
+    this.modelo.editarPregunta(nombre, respuestas, id);
+  },
+  agregarVoto: function (id, respuestaSeleccionada) {
+    this.modelo.agregarVoto(id, respuestaSeleccionada);
   }
-}
+
+};

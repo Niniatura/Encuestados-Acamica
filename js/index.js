@@ -1,7 +1,7 @@
 var modelo = new Modelo();
 var vistaAdmin = new VistaAdministrador(modelo, new Controlador(modelo), {
   'lista': $('#lista'),
-  'botonEditarPregunta': $('#editarPregunta'),
+  'botonEditarPregunta': $('#editarPregunta'),// el primero es el nombre de la propiedad, el segundo el sselector JQuery
   'botonBorrarPregunta': $('#borrarPregunta'),
   'borrarTodo': $('#borrarTodo'),
   'pregunta': $('#pregunta'),
